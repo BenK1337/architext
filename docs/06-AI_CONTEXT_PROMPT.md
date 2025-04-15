@@ -50,14 +50,64 @@ Refer to these primary documents for project details:
 * **Database Schema Notes:** Understand the planned schema (key tables: `users`, `projects`, `generated_documents`, `tasks`) by referring to the feature descriptions in `00-OVERVIEW.md` and the coding guidelines in `02-INSTRUCTIONS.md`. Note that the detailed schema evolves during development (see `03-TASKS.md`).
 * **Key API Endpoints (Edge Functions):** Identify key planned Edge Functions (like `trigger-generation`, `get-project-details`) and their purpose by reviewing `00-OVERVIEW.md` and `03-TASKS.md`. Note that exact payloads are defined during implementation.
 
-## **🎯 Current Task / Goal (AI Suggests, User Confirms/Defines)**
+## **🎯 Current Task / Goal (Open & Closed Tasks Overview)**
 
 _Last updated: 2025-04-15_
 
+### ✅ Completed Tasks (Closed)
+- 1.1 Project Initialization
+- 1.2 CSS & PostCSS Setup
+- 1.5 Basic Navigation Components
+- 1.6 Supabase Setup
+- A2. Replicate Google AI Studio UI
+  - Landing/dashboard page is now centered and visually polished
+  - Login provider type fix (Supabase Provider type)
+  - Layout and component alignment is consistent and on-brand
 
-**AI Action:** Review [`./03-TASKS.md`](./03-TASKS.md). Find the last task marked `[x]` (Done). Then, find the **first subsequent task** in the list that is marked `[ ]` (To Do), skipping any tasks marked `[-]` (Deferred/Blocked). If no tasks are marked `[x]`, suggest the very first task marked `[ ]`. State the title of this identified task below as a suggestion.
+### 🟡 Open Tasks (To Do)
+- 1.3 Dependency Installation: Install Melt UI, Lucide Icons, Supabase client libs
+- 1.4 Core Layout (`src/routes/+layout.svelte`): Main layout and global styles
+- A1. Enable Providers in Supabase (GitHub, Google, Passkeys)
+- A2.1 Sidebar: Left sidebar with logo, navigation, footer
+- A2.2 Main Prompt Area: Headline, prompt input, suggestion chips, Run button
+- A2.3 Top Bar: Top navigation with avatar, settings, links
+- A2.4 Right Sidebar: Run/settings panel
+- A2.5 Profile Menu: Avatar dropdown, user info, switch/logout
+- A3. Auth Integration: Supabase Auth in SvelteKit, session management, route protection
+- A4. User Info & Logout: Show user info and logout button
+- A5. Test Auth Flows
+- 1.7 Authentication UI: Login/Signup routes, route protection
+- 2.1 Dashboard Page (`/`): +page.svelte, UI, project list
+- 2.2 New Project Page/Modal: Form UI, validation
+- 2.3 Project Page (`/project/[id]`): Tabbed interface for Documentation/Tasks
+- 2.4 Document Display UI: Collapsible sections, Markdown rendering, styles
+- 2.5 Task Display UI: Task list with styled checkboxes
+- 2.6 Loading State UI: Loading indicators, feedback messages
+- 2.7 Error Handling UI: Toast/Alert components
+- 3.1 Database Schema & RLS: Define schema, implement/test RLS
+- 3.2 Mock AI Service Interface
+- 3.3 `trigger-generation` Edge Function
+- 3.4 AI Response Handling Logic
+- 3.5 `get-project-details` Edge Function
+- 4.1 New Project Form Logic
+- 4.2 Realtime/Polling Logic
+- 4.3 Project Data Fetching
+- 4.4 Data Rendering
+- 4.5 State Management
+- 4.6 Connect Loading/Error UI
+- 4.7 Basic Navigation
+- 5.1 E2E Testing
+- 5.2 Manual Testing
+- 5.3 Refinement
+- 5.4 Monitoring & Logging
+- 5.5 Deployment Prep
 
-**Suggested Next Task (AI to fill):** `[AI Suggests Task Title based on analysis of TASKS.md]`
+---
+
+**How to use:**
+- Select the next actionable task from the open list above and specify it in the CURRENT_FOCUS below.
+- Only one task should be specified at a time. Tasks should be completed sequentially, not in parallel.
+- Example: `Implement task 2.4: Document Display UI`
 
 ---
 

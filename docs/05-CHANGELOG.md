@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### **Added** ✨
 
+* Task 1.3 Dependency Installation confirmed complete (dependencies present in package.json, no further installation required).
+
 * Initial project setup and planning documents created:
     * `README.md`
     * `/docs/00-OVERVIEW.md`

@@ -2,6 +2,7 @@
 // Import global CSS for theme and base styles
 import '../lib/styles/global.css';
 import TopBar from '$lib/components/TopBar/TopBar.svelte';
+import Sidebar from '$lib/components/Sidebar/Sidebar.svelte';
 import { supabase } from '$lib/supabaseClient';
 import { onMount } from 'svelte';
 import { writable } from 'svelte/store';
@@ -40,67 +41,56 @@ function handleLogout() {
 </script>
 
 <!-- Main App Layout -->
-<header class="app-header">
-  <TopBar {user} onLogout={handleLogout} />
-  <slot name="header" />
-</header>
 <div class="app-shell">
-  <div class="app-body">
-    <aside class="app-sidebar">
-      <slot name="sidebar" />
-    </aside>
-    <main class="app-main">
+  <Sidebar />
+  <div class="app-main-area">
+    <header class="app-header">
+      <TopBar {user} onLogout={handleLogout} />
+    </header>
+    <main class="app-main-content">
       <slot />
     </main>
   </div>
 </div>
-
 <style>
 .app-shell {
-  min-height: 100vh;
+  display: flex;
+  height: 100vh;
+  background: var(--color-background);
+  font-family: var(--font-sans);
+  min-width: 0;
+}
+
+.app-main-area {
+  flex: 1 1 0%;
   display: flex;
   flex-direction: column;
-  background: var(--color-background);
+  min-width: 0;
+  height: 100vh;
+  overflow: auto;
 }
 .app-header {
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 10;
   background: var(--color-surface);
   box-shadow: var(--shadow-xs);
-}
-.app-body {
-  flex: 1 1 auto;
+  height: 3.5rem;
   display: flex;
-  min-height: 0;
+  align-items: center;
+  padding: 0 2rem;
 }
-.app-sidebar {
-  width: 240px;
-  min-width: 180px;
-  max-width: 320px;
-  background: var(--color-surface);
-  border-right: 1px solid var(--color-border);
-  min-height: 0;
-  overflow-y: auto;
-}
-.app-main {
+.app-main-content {
   flex: 1 1 auto;
-  min-width: 0;
-  min-height: 0;
-  padding: var(--space-6) var(--space-8);
-  background: var(--color-background);
   overflow-y: auto;
+  background: var(--color-background);
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 0;
 }
-@media (max-width: 900px) {
-  .app-body {
-    flex-direction: column;
-  }
-  .app-sidebar {
-    width: 100%;
-    max-width: none;
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
-  }
-}
+
+
+
 </style>

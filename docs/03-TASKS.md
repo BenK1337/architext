@@ -8,7 +8,7 @@ This file tracks the development tasks for the Minimum Viable Product (MVP). Ref
 
 * `[x]` **1.1 Project Initialization:** SvelteKit project created, dependencies to be installed, and Git initialized. Private GitHub repo created and initial commit pushed (`gh repo create architext --private`). See /docs/08-PROJECT-STRUCTURE.md for structure details.
 * `[x]` **1.2 CSS & PostCSS Setup:** CSS file structure, theme and global styles, and PostCSS config (autoprefixer) complete. Globals imported in root layout.
-* `[ ]` **1.3 Dependency Installation:** Install Melt UI (`@melt-ui/svelte`), Lucide Icons (`lucide-svelte`), Supabase client libs (`@supabase/auth-helpers-sveltekit`, `@supabase/supabase-js`). 📦
+* `[x]` **1.3 Dependency Installation:** Melt UI, Lucide Icons, and Supabase client libs already present in package.json—no further installation required. 📦
 * `[ ]` **1.4 Core Layout (`src/routes/+layout.svelte`):** Create main layout using semantic HTML, apply global layout styles. Ensure `<body>` scroll.
 * `[x]` **1.5 Basic Navigation Components:** Header and Sidebar components created, styled with CSS Modules, and integrated into +layout.svelte per design system.
 * `[x]` **1.6 Supabase Setup:** Supabase project configured, .env.example provided, and client initialized in src/lib/supabaseClient.ts. User credentials stored in docs.

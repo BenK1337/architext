@@ -1,0 +1,26 @@
+.welcome-banner {
+  background: var(--color-primary-faint);
+  border-radius: 1.5rem;
+  padding: 2.5rem 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.14s;
+}
+.welcome-banner:hover {
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.10);
+}
+.welcome-banner h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  transition: color 0.14s;
+}
+.welcome-banner h2:hover {
+  color: var(--color-primary-active);
+}
+.welcome-banner p {
+  font-size: 1.1rem;
+  color: var(--color-on-surface-muted);
+}

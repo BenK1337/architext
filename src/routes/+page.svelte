@@ -1,44 +1,57 @@
 <script lang="ts">
-  import Header from '../lib/components/Header/Header.svelte';
-  import Sidebar from '../lib/components/Sidebar/Sidebar.svelte';
+import WorkspaceOverview from '$lib/components/WorkspaceOverview/WorkspaceOverview.svelte';
+import RecentProjects from '$lib/components/RecentProjects/RecentProjects.svelte';
+import QuickActions from '$lib/components/QuickActions/QuickActions.svelte';
+import ActivityFeed from '$lib/components/ActivityFeed/ActivityFeed.svelte';
+import WelcomeBanner from '$lib/components/WelcomeBanner/WelcomeBanner.svelte';
 </script>
 
 <div>
-  <Header slot="header" title="Architext AI" />
-  <Sidebar slot="sidebar" />
-  <div class="landing-container">
-    <section class="landing-section">
-      <h1>Welcome to Architext AI</h1>
-      <p>This is your MVP shell. Use the sidebar to navigate and the header for actions.</p>
-    </section>
+  <div class="dashboard-container">
+    <div class="dashboard-main">
+      <WorkspaceOverview />
+      <WelcomeBanner />
+      <QuickActions />
+      <RecentProjects />
+    </div>
+    <div class="dashboard-side">
+      <ActivityFeed />
+    </div>
   </div>
 </div>
 
 <style>
-.landing-container {
+.dashboard-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-  width: 100vw;
-  background: var(--color-background);
-}
-.landing-section {
-  background: var(--color-surface);
+  gap: 2.5rem;
   padding: 2.5rem 3rem;
-  border-radius: 1.2rem;
-  box-shadow: var(--shadow-md);
-  text-align: center;
-  max-width: 440px;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.landing-section h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
+.dashboard-main {
+  flex: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
-.landing-section p {
-  font-size: 1.1rem;
-  color: var(--color-on-surface-muted);
+.dashboard-side {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  .dashboard-side {
+    max-width: none;
+    min-width: 0;
+  }
 }
 </style>
