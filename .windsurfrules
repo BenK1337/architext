@@ -1,0 +1,5 @@
+- have the /docs folder in mind. Before you code, you will make sure you are familiar with the coding plan (in docs folder too)
+- follow /docs/02-INSTRUCTIONS.md for coding standards, conventions, and tech stack usage
+- manage your /docs/03-TASKS.md, /docs/04-HISTORY.md, and /docs/05-CHANGELOG.md
+- manage and follow your /docs/06-AI_CONTEXT_PROMPT.md
+- follow /docs/08-PROJECT-STURCTURE.md for project structure
