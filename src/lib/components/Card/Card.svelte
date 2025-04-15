@@ -1,5 +1,6 @@
 <script lang="ts">
-// TODO: Add props for elevation, padding, clickable, etc.
+  // TODO: Add props for elevation, padding, clickable, etc.
+  import styles from './Card.module.css';
 </script>
 
 <div class={styles.card}>

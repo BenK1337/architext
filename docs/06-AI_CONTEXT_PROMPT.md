@@ -31,10 +31,21 @@ Refer to these primary documents for project details:
 
 ## **🔑 Critical Setup Details (User: Fill before use)**
 
-* **Supabase URL:** `[Your PUBLIC_SUPABASE_URL Here]`
-* **Supabase Anon Key:** `[Your PUBLIC_SUPABASE_ANON_KEY Here]`
+* **Supabase URL:** `https://betvkqxsvkjaxyopesyi.supabase.co`
+* **Supabase Anon Key:** `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJldHZrcXhzdmtqYXh5b3Blc3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MzA1NTcsImV4cCI6MjA2MDIwNjU1N30.8gvfnr9a3FX3uhYy4zuBj8WEy_jxOVGCG1KJtco7fvQ`
 
 ## **🧠 Project Context (AI: Infer from Docs)**
+
+---
+
+## **✨ Recent UI/UX Improvements**
+
+- The landing (dashboard) page now uses a modern, centered flexbox layout for a polished, professional look.
+- Login logic now uses the correct Supabase Provider type, fixing previous TypeScript errors.
+- Layout and component alignment is consistent across the shell, sidebar, and top bar.
+- All content and labels are Architext-specific, following branding guidelines.
+
+---
 
 * **Database Schema Notes:** Understand the planned schema (key tables: `users`, `projects`, `generated_documents`, `tasks`) by referring to the feature descriptions in `00-OVERVIEW.md` and the coding guidelines in `02-INSTRUCTIONS.md`. Note that the detailed schema evolves during development (see `03-TASKS.md`).
 * **Key API Endpoints (Edge Functions):** Identify key planned Edge Functions (like `trigger-generation`, `get-project-details`) and their purpose by reviewing `00-OVERVIEW.md` and `03-TASKS.md`. Note that exact payloads are defined during implementation.
@@ -47,6 +58,14 @@ _Last updated: 2025-04-15_
 **AI Action:** Review [`./03-TASKS.md`](./03-TASKS.md). Find the last task marked `[x]` (Done). Then, find the **first subsequent task** in the list that is marked `[ ]` (To Do), skipping any tasks marked `[-]` (Deferred/Blocked). If no tasks are marked `[x]`, suggest the very first task marked `[ ]`. State the title of this identified task below as a suggestion.
 
 **Suggested Next Task (AI to fill):** `[AI Suggests Task Title based on analysis of TASKS.md]`
+
+---
+
+## **🧠 AI Context Window Policy**
+
+- The AI will monitor its context window and proactively warn the user if the context is nearing its limit.
+- If the context window is close to being filled, the AI will alert the user and recommend summarizing or archiving less relevant information.
+- This policy is actively reflected in the docs and in real-time interactions to ensure no critical information is lost during development.
 
 **User Action:** Please confirm if the suggested task above is correct, **OR** clearly describe the specific task, code section, or question you need assistance with *right now* in the `CURRENT_FOCUS` block below. _Only one task should be specified at a time; tasks should be completed one after another, not in parallel._ Providing your specific focus is essential for getting relevant assistance, as the AI cannot know your exact immediate need or handle situations outside the suggested linear flow (like bug fixing or revisiting deferred tasks) without your explicit direction.
 

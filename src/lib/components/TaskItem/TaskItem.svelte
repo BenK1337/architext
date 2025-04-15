@@ -1,6 +1,7 @@
 <script lang="ts">
-// TODO: Add props for task, checked, onToggle, etc.
-export let checked: boolean = false;
+  // TODO: Add props for task, checked, onToggle, etc.
+  export let checked: boolean = false;
+  import styles from './TaskItem.module.css';
 </script>
 
 <div class={styles.taskItem}>

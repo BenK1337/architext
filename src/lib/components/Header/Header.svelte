@@ -1,8 +1,12 @@
 <script lang="ts">
-// TODO: Add props for title, actions, navigation, etc.
+  // TODO: Add props for title, actions, navigation, etc.
+export let title: string;
+
+  import styles from './Header.module.css';
 </script>
 
 <header class={styles.header}>
+  <span>{title}</span>
   <slot />
 </header>
 

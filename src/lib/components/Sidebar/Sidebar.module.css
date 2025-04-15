@@ -9,4 +9,106 @@
   flex-direction: column;
   box-shadow: var(--shadow-xs);
   transition: width var(--transition-medium);
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-family: var(--font-sans);
+}
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 2.5rem;
+}
+.logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+}
+.navSection {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  background: none;
+  font-size: 1.08rem;
+  color: var(--color-text-secondary);
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.navItem:hover, .navItem:focus {
+  background: var(--color-primary-faint);
+  color: var(--color-primary);
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.navText {
+  font-weight: 500;
+}
+.historySection {
+  margin-top: 2rem;
+}
+.historyTitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.historyItem {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.historyItem:hover, .historyItem:focus {
+  background: var(--color-primary-faint);
+  color: var(--color-primary);
+}
+.footerSection {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: auto;
+  justify-content: flex-start;
+}
+.footerLink {
+  color: var(--color-link);
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.footerLink:hover, .footerLink:focus {
+  color: var(--color-primary);
+  text-decoration: underline;
 }

@@ -7,11 +7,34 @@ This file tracks the development tasks for the Minimum Viable Product (MVP). Ref
 ## **Phase 1: Project Setup & Core UI Shell** 🏗️
 
 * `[x]` **1.1 Project Initialization:** SvelteKit project created, dependencies to be installed, and Git initialized. Private GitHub repo created and initial commit pushed (`gh repo create architext --private`). See /docs/08-PROJECT-STRUCTURE.md for structure details.
-* `[ ]` **1.2 CSS & PostCSS Setup:** Create CSS file structure (`src/lib/styles/...`), configure PostCSS (`vite.config.js` or `postcss.config.js` with autoprefixer), populate `theme.css` (CSS vars) & `global.css`. Import globals in root layout.
+* `[x]` **1.2 CSS & PostCSS Setup:** CSS file structure, theme and global styles, and PostCSS config (autoprefixer) complete. Globals imported in root layout.
 * `[ ]` **1.3 Dependency Installation:** Install Melt UI (`@melt-ui/svelte`), Lucide Icons (`lucide-svelte`), Supabase client libs (`@supabase/auth-helpers-sveltekit`, `@supabase/supabase-js`). 📦
 * `[ ]` **1.4 Core Layout (`src/routes/+layout.svelte`):** Create main layout using semantic HTML, apply global layout styles. Ensure `<body>` scroll.
-* `[ ]` **1.5 Basic Navigation Components:** Create `Header.svelte`, `Sidebar.svelte` (use CSS Modules for styling). Integrate into `+layout.svelte`.
-* `[ ]` **1.6 Supabase Setup:** Create Supabase project, configure `.env` file, initialize Supabase client (`src/lib/supabaseClient.ts`). ☁️
+* `[x]` **1.5 Basic Navigation Components:** Header and Sidebar components created, styled with CSS Modules, and integrated into +layout.svelte per design system.
+* `[x]` **1.6 Supabase Setup:** Supabase project configured, .env.example provided, and client initialized in src/lib/supabaseClient.ts. User credentials stored in docs.
+
+---
+
+## **Authentication Providers & Landing UI (MVP)** 🔐
+
+> The login/landing experience must visually and functionally use the Google AI Studio design system (layout, theme, animation), but all navigation, prompts, history, and labels are Architext-specific—not generic or Google/AI Studio examples.
+
+* `[ ]` **A1. Enable Providers in Supabase:** Enable GitHub, Google, and Passkeys (WebAuthn) in the Supabase Auth dashboard. No email/password login.
+* `[x]` **A2. Replicate Google AI Studio UI:**
+    * [x] **Landing/dashboard page is now centered and visually polished.**
+    * [x] **Login provider type fix (Supabase Provider type).**
+    * [x] **Layout and component alignment is consistent and on-brand.**
+    * `[ ]` **A2.1 Sidebar:** Implement left sidebar with logo/branding, navigation (Chat, Stream, Video Gen, Starter Apps, History), and footer (feedback, legal links).
+    * `[ ]` **A2.2 Main Prompt Area:** Implement headline, prompt input, suggestion chips, and Run button/dropdown.
+    * `[ ]` **A2.3 Top Bar:** Implement top navigation with avatar, settings, Studio/Dashboard/Docs links, and (optional) Get API Key button.
+    * `[ ]` **A2.4 Right Sidebar:** Implement run/settings panel (temperature, toggles, sliders, advanced settings).
+    * `[ ]` **A2.5 Profile Menu:** Implement dropdown menu for avatar with user info, provider, switch account, and logout.
+* `[ ]` **A3. Auth Integration:** Integrate Supabase Auth into SvelteKit; set up session management and route protection (e.g., in hooks or root layout `load`).
+* `[ ]` **A4. User Info & Logout:** Show logged-in user info (avatar/email/provider) and a logout button in the UI (e.g., header or sidebar).
+* `[ ]` **A5. Test Auth Flows:** Test login/logout for all providers, verify correct session handling and error feedback.
+
+---
+
 * `[ ]` **1.7 Authentication UI:** Implement Login/Signup routes/UI using custom components styled with CSS Modules, calling Supabase Auth methods. Setup basic route protection (e.g., in root layout `load` function or hooks). 🔐
 
 ---

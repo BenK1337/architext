@@ -20,6 +20,7 @@
 ## **Phase: MVP Development** 🏗️ *(In Progress)*
 
 * **2025-04-15:** Local git repository initialized, private GitHub repo created (https://github.com/BenK1337/architext), and initial commit pushed. 
+* **2025-04-15:** Landing page centering, login provider type fix, and layout polish completed.
 * **(Next):** Begin implementation based on [`./03-TASKS.md`](./03-TASKS.md).
 
 ---

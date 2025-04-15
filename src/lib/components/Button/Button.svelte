@@ -1,8 +1,9 @@
 <script lang="ts">
-// TODO: Add props for variant, size, loading, disabled, icon, etc.
-// Use design tokens from theme.css for styling
-export let type: 'button' | 'submit' | 'reset' = 'button';
-export let disabled: boolean = false;
+  // TODO: Add props for variant, size, loading, disabled, icon, etc.
+  // Use design tokens from theme.css for styling
+  export let type: 'button' | 'submit' | 'reset' = 'button';
+  export let disabled: boolean = false;
+  import styles from './Button.module.css';
 </script>
 
 <button type={type} disabled={disabled} class={styles.button}>
