@@ -6,7 +6,7 @@ This file tracks the development tasks for the Minimum Viable Product (MVP). Ref
 
 ## **Phase 1: Project Setup & Core UI Shell** 🏗️
 
-* `[ ]` **1.1 Project Initialization:** Create SvelteKit project (`npx create-svelte@latest`), install deps, init Git. Refer to /docs/08-PROJECT-STRUCTURE.md for project structure details.
+* `[x]` **1.1 Project Initialization:** SvelteKit project created, dependencies to be installed, and Git initialized. Private GitHub repo created and initial commit pushed (`gh repo create architext --private`). See /docs/08-PROJECT-STRUCTURE.md for structure details.
 * `[ ]` **1.2 CSS & PostCSS Setup:** Create CSS file structure (`src/lib/styles/...`), configure PostCSS (`vite.config.js` or `postcss.config.js` with autoprefixer), populate `theme.css` (CSS vars) & `global.css`. Import globals in root layout.
 * `[ ]` **1.3 Dependency Installation:** Install Melt UI (`@melt-ui/svelte`), Lucide Icons (`lucide-svelte`), Supabase client libs (`@supabase/auth-helpers-sveltekit`, `@supabase/supabase-js`). 📦
 * `[ ]` **1.4 Core Layout (`src/routes/+layout.svelte`):** Create main layout using semantic HTML, apply global layout styles. Ensure `<body>` scroll.

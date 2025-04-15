@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     * `/docs/06-AI_CONTEXT_PROMPT.md`
     * `/docs/07-TROUBLESHOOTING.md`
 * Basic Git repository initialization.
+* Private GitHub repository created (`gh repo create architext --private`) and initial commit pushed.
 
 ---
 
